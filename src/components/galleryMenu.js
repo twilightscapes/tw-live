@@ -33,7 +33,7 @@ export default function testPage() {
  width:'', height:'', border:'0px solid red', color:'#fff',  textShadow: '1px 1px 0 rgba(121, 115, 115, 0.7)', whiteSpace:'nowrap', fontWeight:'bold', margin:'-80px auto 0 auto'}}><RiArrowRightSLine style={{fontSize:'50px'}} /></div>
 </div> */}
 
-<div className="horizontal-scroll-wrapper spares menurapper" style={{margin:'20px'}}>
+<div className="horizontal-scroll-wrapper spares menurapper" style={{margin:'0'}}>
 
 
 
