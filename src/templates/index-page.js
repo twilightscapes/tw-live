@@ -5,7 +5,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
 import { RiArrowRightSLine } from "react-icons/ri"
-import { IoIosArrowDroprightCircle, IoIosArrowDropdownCircle } from "react-icons/io"
+// import { IoIosArrowDroprightCircle, IoIosArrowDropdownCircle } from "react-icons/io"
 import ScrollAnimation from 'react-animate-on-scroll'
 import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
@@ -20,8 +20,9 @@ import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import GalleryMenu from "../components/galleryMenu"
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
+import ShareSocial from '../components/share'
 import TwilightLogo from "../../static/assets/TSidebarHover.svg"
-import IntroHelper from "../../static/assets/help-intro.svg"
+// import IntroHelper from "../../static/assets/help-intro.svg"
 const CustomBox = styled.div`
 
 `
@@ -551,7 +552,7 @@ const YouTube = frontmatter.youtuber
 <section style={{ display:'', height:'', overflow:''}}>
   <article>
 <div className="flexbutt" style={{display:'flex', gap:'30px'}}>
-      <div className="flexcheek " style={{padding:'1rem 2rem 0 2rem', maxHeight:'90vh',}}>
+      <div className="flexcheek " style={{padding:'0 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
           <h1 className="title1">
@@ -709,6 +710,12 @@ Through NFT
 {/* end show Info */}
 
 
+
+<ShareSocial />
+
+
+
+
 {/* end show Posts */}
 {ShowPosts ? (
 
@@ -716,7 +723,7 @@ Through NFT
         <BlogListHome data={posts} />
 
 
-        <div style={{textAlign:'center',}}><Link className="post-card button " to="/posts/" style={{textDecoration:'none', color:'inherit',}}> More Posts <RiArrowRightSLine style={{fontSize:'50px'}} /></Link></div>
+        <div style={{textAlign:'center',}}><Link className="post-card button " to="/posts/2/" style={{textDecoration:'none', color:'inherit',}}> More Posts <RiArrowRightSLine style={{fontSize:'50px'}} /></Link></div>
 
 
         {/* <section style={{height:'auto'}}>

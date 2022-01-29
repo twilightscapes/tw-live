@@ -23,9 +23,7 @@ export function ProductListing({ products }) {
     <div className="introspacer" style={{}}></div>
 
 <div className="intropanel">
-  {/* <Link to="/contact">
- 
-  </Link> */}
+
 </div>
 
       {products.map((p, index) => (

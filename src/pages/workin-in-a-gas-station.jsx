@@ -64,10 +64,10 @@ export const query2 = graphql`
 
 <NFTMenu />
 
-<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'1vh', background:''}}>
+<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'0', background:''}}>
 
    
-<div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+<div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
 
   
 
@@ -98,19 +98,21 @@ fontSize:'100%',
                   
 {/* <NFTMenu /> */}
                   
-                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'1vh', background:''}}>
+                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'0', background:''}}>
 
-                  <div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+                  <div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
                   
-                  
-                  <p className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Workin' In A Gas Station </p>
+                
+
+                  <h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Workin' In A Gas Station</h1>
                   
                   <p style={{textAlign:'center', fontSize:'140%', marginTop:''}}>A collection of old abandoned roadside filling gas stations</p>
+                  
                   
                   <h3 style={{textAlign:'center', fontSize:'120%', marginTop:''}}>"You're gonna wind up workin in a gas station"</h3>
 
       
-
+<br /><br />
 <h4>How little did I know that my favorite Zappa song would become so apropos as the title for this collection.</h4>
 <br />
 

@@ -62,9 +62,9 @@ export const query2 = graphql`
 <NFTMenu />
 
 
-<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'1vh', background:''}}>
+<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'0', background:''}}>
    
-<div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+<div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
                   
 
 
@@ -99,12 +99,13 @@ fontSize:'100%',
                   
                 
                   
-                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'1vh', background:''}}>
+                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'0', background:''}}>
 
-                  <div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+                  <div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
                   
                   
-                  <p className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Dendroid Dreams</p>
+             
+                  <h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Dendroid Dreams</h1>
 
 <h3 style={{textAlign:'center', fontSize:'140%', marginTop:''}}>A collection of photos that show the aging spirits of trees.</h3>
 

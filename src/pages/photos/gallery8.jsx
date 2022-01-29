@@ -5,10 +5,11 @@ import { graphql } from "gatsby"
 import { Layout } from "../../components/layout"
 import { Seo } from "../../components/seo"
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-import GalleryMenu from "../../components/galleryMenu-old"
+import GalleryMenu from "../../components/galleryMenu"
 // import { StaticImage } from "gatsby-plugin-image"
 // import ShareSocial from '../../components/share' 
 import TwilightLogo from "../../../static/assets/TSidebarHover.svg"
+import Newsignup from "../../components/newssign"
 const Gal1Page = ({data}) => (
   
       <Layout className="thanks-page">
@@ -33,7 +34,13 @@ const Gal1Page = ({data}) => (
       <div className="horizontal-scroll-wrapper squares" style={{ width:'', padding:'0'}}>
 
 
-      <div style={{width:'1000px', height:'1000px'}}></div>
+      <div className="introspacer" style={{}}></div>
+
+          <div className="intropanel">
+            {/* <Link to="/contact">
+           
+            </Link> */}
+          </div>
           
     {/* {data.allFile.edges.map(edge => {
       return <GatsbyImage
@@ -51,6 +58,14 @@ const Gal1Page = ({data}) => (
       key={edge.node.id}
     />
     })}
+
+<div className="donation" style={{}}>
+{/* <Link to="/contact"> */}
+<div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
+  <Newsignup />
+  </div>
+{/* </Link> */}
+</div>
 
 
     </div>

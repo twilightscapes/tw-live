@@ -23,7 +23,7 @@ const WaterPage = ({data}) => (
 <Seo
           title={`Water Nature Photography`}
           description={`Photos of nature that focus on water`}
-          image={'https://twilightscapes.com/images/water-is-life/Water Is Life - 7 of 29.jpeg'}
+          image={'https://twilightscapes.com/images/waterislife.jpg'}
         />
   {/* <GalleryMenu /> */}
 
@@ -77,9 +77,12 @@ const WaterPage = ({data}) => (
          {/* <div className="spacer66" /> */}
 
 
-         <br /><br />
-         <p className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Water Is Life </p>
-         <br /><br />
+
+
+<br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Water Is Life <br /><span style={{fontSize:'50%'}}>photos by Todd Lambert</span></h1>
+<br />
+
  <ShareSocial />
 
 

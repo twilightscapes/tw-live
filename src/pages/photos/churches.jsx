@@ -23,7 +23,7 @@ const ChurchPage = ({data}) => (
 <Seo
           title={`Church Photography at Night`}
           description={`Photos of old abandoned churches`}
-          image={'https://twilightscapes.com/images/churches/Churches - 11 of 17.jpeg'}
+          image={'https://twilightscapes.com/images/churches.jpg'}
         />
   {/* <GalleryMenu /> */}
 
@@ -76,9 +76,10 @@ const ChurchPage = ({data}) => (
          {/* <div className="spacer66" /> */}
 
 
-         <br /><br />
-         <h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Churches </h1>
-         <br /><br />
+
+         <br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Churches <br /><span style={{fontSize:'50%'}}>photos by Todd Lambert</span></h1>
+<br />
  <ShareSocial />
 
 

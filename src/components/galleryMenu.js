@@ -2,7 +2,7 @@ import * as React from "react"
 // import { Layout } from "../components/layout"
 // import GoBack from "./goBack"
 import { Link } from "gatsby"
-import { RiArrowRightSLine } from "react-icons/ri"
+// import { RiArrowRightSLine } from "react-icons/ri"
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import { StaticImage } from "gatsby-plugin-image"
 // import { Seo } from "./seo"
@@ -39,45 +39,46 @@ export default function testPage() {
 
 <div style={{width:'100px', height:'100px', display:'inline-block', border:'0px solid blue', padding:'0 0 0 0', marginTop:'0'}}></div>
 
+<div name="limitededitions" style={{border:'0px solid dotted', borderRadius:'0 12px 0 0', background:'', paddingTop:'12px', paddingBottom:'10px',
+//  paddingLeft:'-40px', 
+ marginLeft:'-60px', textShadow:'0px 0px 16px #fff', color:'#fff'}}>
+  Themed Galleries:
+</div>
+
   <div name="milkyway"><Link id="milkyway" className="button" to="/photos/milky-way">
-  Milky Way
+  Under the Milky Way
 </Link></div>
 
 <div><Link id="ghosttowns" className="button" to="/photos/ghosttowns">
   Ghost Towns
 </Link></div>
 
-<div><Link id="water" className="button" to="/photos/water-is-life">
-  Water Is Life
-</Link></div>
-
-
 <div>
 {/* <AnchorLink to="/photos/cars#rust" title="Relics of Rust"></AnchorLink> */}
   <Link name="rust" id="rust" className="button" to="/photos/cars">
-  Relics of Rust
+  Abandoned Vehicles
 </Link>
 </div>
+
+<div><Link id="route66" className="button" to="/photos/route66">
+  Route 66 Dreams
+</Link></div>
 
 <div><Link className="button" to="/photos/crazy-geology"
 >
   Crazy Geology
 </Link></div>
 
+<div><Link id="water" className="button" to="/photos/water-is-life">
+  Water Is Life
+</Link></div>
+
 <div><Link className="button" to="/photos/churches">
   Churches
 </Link></div>
 
-<div><Link className="button" to="/dendroid-dreams/">
-  Dendroid Dreams
-</Link></div>
-
-<div><Link className="button" to="/workin-in-a-gas-station">
-  Gas Stations
-</Link></div>
-
 <div><Link className="button" to="/photos/daylight">
-  Daylight
+  By Daylight
 </Link></div>
 
 <div><Link className="button" to="/photos/in-the-city">
@@ -89,6 +90,31 @@ export default function testPage() {
 </a></div> */}
 
 
+<div name="limitededitions" style={{border:'1px solid dotted', borderRadius:'0 12px 0 0', background:'', paddingTop:'12px', paddingBottom:'10px',
+//  paddingLeft:'-40px', 
+ marginLeft:'-60px', textShadow:'0px 0px 16px #fff', color:'#fff'}}>
+  Limited Editions:
+</div>
+
+{/*  */}
+
+
+
+<div><Link className="button" to="/genesis/">
+Follow Me Into The Night
+</Link></div>
+
+<div><Link className="button" to="/dendroid-dreams/">
+  Dendroid Dreams
+</Link></div>
+
+<div><Link className="button" to="/workin-in-a-gas-station">
+Workin' In A Gas Station
+</Link></div>
+
+{/*  */}
+
+
 
 </div>
 <div className="RArrow" style={{textAlign:'center', position:'absolute', left:'20px', bottom:'20px', width:'', zIndex:'-1'}}> <span></span> </div>
@@ -97,7 +123,33 @@ export default function testPage() {
 </div>
 
 
+<ul className="galmenu fullarchive masonry" style={{borderTop:'2px dotted #222', padding:'2%'}}>
+      {/* <li style={{width:'120px', textAlign:'', fontSize:'80%', padding:'0 1rem', borderRight:'1px dotted #666', margin:'0 1rem 1rem 0',}}>Bonus Galleries</li> */}
 
+      <li className="mobilehide" style={{width:'120px', textAlign:'', fontSize:'80%', padding:'0 0 0 0', borderRight:'0px dotted #666', margin:'0 20px 5px 15px', fontWeight:'bold', textShadow:'0px 0px 16px #fff', color:'#fff'}}>Full Archives:</li>
+
+
+
+      <li className="galmenu-item"><Link to="/photos/gallery1/" className=""  title="Gallery 1" >I</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery2/" className=""   title="Gallery 2">II</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery3/" className=""   title="Gallery 3">III</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery4/" className=""   title="Gallery 4">IV</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery5/" className=""   title="Gallery 5">V</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery6/" className=""   title="Gallery 6">VI</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery7/" className=""   title="Gallery 7">VII</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery8/" className=""   title="Gallery 8">VIII</Link></li>
+      <li className="galmenu-item"><Link to="/photos/gallery9/" className=""   title="Gallery 9">IV</Link></li>
+      {/* <li className="galmenu-item1"><Link to="/gallery10/"  title="Gallery 10">X</Link></li> */}
+      
+      {/* <li className="galmenu-item no-app"><Link to="/install"  title="Gallery 8">VIII<FaLock  style={{position:'absolute', top:'0', right:'0', color:'#aaa',}} className="lock" /></Link></li>
+      <li className="galmenu-item no-app"><Link to="/install"  title="Gallery 9">IV<FaLock  style={{position:'absolute', top:'0', right:'0', color:'#aaa',}} className="lock" /></Link></li>
+      <li className="galmenu-item no-app"><Link to="/install"  title="Gallery 10">X<FaLock  style={{position:'absolute', top:'0', right:'0', color:'#aaa',}} className="lock" /></Link></li> */}
+      
+      
+      {/* <li className="galmenu-item has-app" has-app><Link to="/photos/gallery8"  title="Gallery 8" has-app>VIII</Link></li>
+      <li className="galmenu-item has-app" has-app><Link to="/photos/gallery9"  title="Gallery 9">IX</Link></li>
+      <li className="galmenu-item has-app" has-app><Link to="/photos/gallery10"  title="Gallery 10">X</Link></li> */}
+      </ul>
 
 
 
