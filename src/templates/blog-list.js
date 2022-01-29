@@ -422,9 +422,17 @@ class BlogIndex extends React.Component {
 
 
  <section style={{height:'auto'}}>
-  <Link to="/#posts" style={{display:'block', width:'100%'}}><article className="post-card" style={{height:'50%', display:'flex', flexDirection:'row', justifyContent:'center', border:'1px solid', padding:'2rem', fontSize:'200%', textAlign:'center' }}>
-  <RiArrowLeftLine style={{fontSize:'50px'}} /> View Newest 
-    </article></Link>
+
+
+ <article style={{textAlign:'center',}}><Link className="post-card button " to="/#posts" style={{textDecoration:'none', color:'inherit',}}><RiArrowLeftLine style={{fontSize:'20px'}} />  View Newest</Link></article>
+
+
+  {/* <Link to="/#posts" style={{display:'block',}}>
+    <article className="post-card button" style={{ display:'flex', flexDirection:'row', justifyContent:'center', border:'1px solid', textAlign:'center' }}>
+  <RiArrowLeftLine style={{fontSize:'20px'}} /> View Newest 
+    </article></Link> */}
+
+
     </section>
 
  <section style={{height:'auto'}}>

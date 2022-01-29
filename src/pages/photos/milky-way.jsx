@@ -122,14 +122,8 @@ export const query = graphql`
 
 
 
-<div className="nft"><ProductListing products={data.shopifyCollection.products} />
-<div className="donation" style={{}}>
-{/* <Link to="/contact"> */}
-<div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
-  <Newsignup />
-  </div>
-{/* </Link> */}
-</div>
+<div className="nft">
+  <ProductListing products={data.shopifyCollection.products} />
 </div>
 <GalleryMenu />
 

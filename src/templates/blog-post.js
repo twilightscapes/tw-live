@@ -890,7 +890,7 @@ const { iconimage } = useSiteMetadata()
    <br />
    <br />
    </CustomBox>
-   <Footer />
+   {/* <Footer /> */}
     </Layout>
 
 

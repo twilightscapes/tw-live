@@ -1295,9 +1295,13 @@ height:100%;
                 text-shadow:2px 2px 2px #333;
               
               }
-  .horizontal-scroll-wrapper:hover::before, .sliderholder1:hover::before{
+  .horizontal-scroll-wrapper:hover::before{
               animation: move 1.2s forwards; 
               /* animation-delay:1s; */
+             }
+
+             .sliderholder1:hover::before{
+              animation: fadeout .5s forwards; 
              }
 
 
@@ -1350,7 +1354,7 @@ height:100%;
                 justify-content:center;
                 border-radius:12px;
                 top:30%;
-                right:0;
+                right:10px;
                 /* bottom:50vh; right:42vh; */
                 color:#fff;
                 /* transform: rotate(90deg); */
@@ -1520,9 +1524,9 @@ height:100%;
 }
 
 
-.menurapper{
+/* .menurapper{
 scroll-snap-type: y proximity !important;
-}
+} */
 
 
 
