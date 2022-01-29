@@ -74,9 +74,9 @@ const IndexPage = ({data}) => (
          {/* <ShareSocial /> */}
          {/* <div className="spacer66" /> */}
 
-         <br /><br />
-<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Relics of Rust</h1>
-<br /><br />
+         <br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Abandoned Vehicles <br /><span style={{fontSize:'50%'}}>old car photos by Todd Lambert</span></h1>
+<br />
  <ShareSocial />
 
 

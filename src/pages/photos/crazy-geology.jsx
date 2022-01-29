@@ -127,9 +127,9 @@ export const query = graphql`
 
 <GalleryMenu />
 
-<br /><br />
-<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Crazy Geology</h1>
-<br /><br />
+<br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Crazy Geology <br /><span style={{fontSize:'50%'}}>photos by Todd Lambert</span></h1>
+<br />
 
 <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
 

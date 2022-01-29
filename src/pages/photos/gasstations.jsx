@@ -67,9 +67,15 @@ const IndexPage = ({data}) => (
          {/* <div className="spacer66" /> */}
 
 
-         <br /><br />
-<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Gas Stations</h1>
-<br /><br />
+
+
+
+<br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Workin' In A Gas Station <br /><span style={{fontSize:'50%'}}>photos by Todd Lambert</span></h1>
+<br />
+
+
+
  <ShareSocial />
 
 

@@ -71,9 +71,9 @@ const IndexPage = ({data}) => (
          {/* <ShareSocial /> */}
          {/* <div className="spacer66" /> */}
 
-         <br /><br />
-<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Ghost Towns</h1>
-<br /><br />
+         <br />
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Ghost Towns <br /><span style={{fontSize:'50%'}}>ghosttown night photos by Todd Lambert</span></h1>
+<br />
  <ShareSocial />
 
 

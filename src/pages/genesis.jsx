@@ -61,9 +61,9 @@ export const query2 = graphql`
 
 <NFTMenu />
 
-<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'1vh', background:''}}>
+<section className="nft1" style={{paddingBottom:'1rem', overflow:'', margin:'0', background:''}}>
    
-<div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+<div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
 
 
               
@@ -98,26 +98,38 @@ fontSize:'100%',
                   
                 
                   
-                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'1vh', background:''}}>
+                  <section className="nft1" style={{paddingTop:'0', overflow:'', margin:'0', background:''}}>
 
-                  <div className="" style={{background:'', padding:'1vh 8vw 0 8vw', textAlign:'left'}}>
+                  <div className="" style={{background:'', padding:'0 8vw 0 8vw', textAlign:'left'}}>
                   
                   
-                  <p className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Follow Me Into The Night </p>
 
-<h3 style={{textAlign:'center', fontSize:'140%', marginTop:''}}>An introduction to Todd Lambert<br /> <span style={{fontSize:'66%'}}>The Genesis Series</span></h3>
+
+<h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Follow Me Into The Night</h1>
+
+
+<h2 style={{textAlign:'center', fontSize:'140%', marginTop:''}}>An introduction to Todd Lambert<br /> <span style={{fontSize:'66%'}}>The Genesis Series</span></h2>
 
 <br /><br />
 
       
 
-<h4>How little did I know that my favorite Zappa song would become so apropos as the title for this collection.</h4>
+
+
+
+
+
+
+
+
+
+<h3>A collection of 14 unique images that illustrate the night as Todd Lambert sees it. Todd works almost exclusively at night as that is his medium of choice. Having lived on the the road and travelled throughout the 16 Western States, he has followed his own paths while creating new ones that he shows with his night photography.</h3>
 <br />
 
-<h5>One of my favorite subject matters has always been old gas stations. I guess it started along with my fascination and later obsession with Route 66.</h5>
+<h4>Todd shoots on Canon, Sony and Nikon equipment but is a bit of a purist when it comes to his photography. The majority of Twilightscapes are single exposure and "as-shot" with very little editing and NO photoshop effects or filters.</h4>
 <br />
 
-<h6>As I explored countless small towns and interstate off-ramps to follow Route 66, I became enamored with the beauty in these old vestiges of an era when the car was king and the open road was  everyone's adventure.</h6>
+<h5>All NFTs include maximum resolution, lossless compressed TIFF files with original source image and print rights included.</h5>
 <br />
 
 <blockquote style={{width:'60%', maxWidth:'80vw', margin:'50px auto', }}>Here I present some of my favorite gas stations that I've "worked in". <br />These images comprise an important part of my life. Just as I explored Route 66 over many years, I did the same with my photography style.
