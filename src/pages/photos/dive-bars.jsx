@@ -7,7 +7,8 @@ import { Seo } from "../../components/seo"
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import GalleryMenu from "../../components/galleryMenu"
 // import { StaticImage } from "gatsby-plugin-image"
-// import ShareSocial from '../../components/share' 
+import ShareSocial from '../../components/share' 
+import GoBack from "../../components/goBack"
 import TwilightLogo from "../../../static/assets/TSidebarHover.svg"
 
 
@@ -22,7 +23,7 @@ const divePage = ({data}) => (
 <Seo
           title={`Todd Lambert's Favorite Photography`}
           description={`Twilightscapes Favorite Night Photography`}
-          image={'https://urbanfetish.com/static/assets/divebars-background.jpg'}
+          image={'https://twilightscapes.com/static/assets/divebars-promo.jpg'}
         />
   {/* <GalleryMenu /> */}
   <div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', overflow:'hidden', position:'relative', padding:' 0',}}>
@@ -56,6 +57,19 @@ const divePage = ({data}) => (
         </div>
          <GalleryMenu />
 
+
+         <h1 className="neonText" style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', color:'#fff'}}>Dive Bars <br /><span style={{fontSize:'50%'}}>Some of the seediest dive bars around</span></h1>
+<br />
+
+<p style={{textAlign:'center',}}>An all new series of digital art by Todd Lambert looks into the darkest corners to show another side of night life.</p>
+
+
+<br />
+ <ShareSocial />
+
+
+<br /><br />
+<GoBack />
 
          {/* <ShareSocial /> */}
 
