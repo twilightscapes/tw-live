@@ -25,7 +25,7 @@ const defaultValues = {
     lineItems: [],
   },
 }
-
+ 
 export const StoreContext = React.createContext(defaultValues)
 
 const isBrowser = typeof window !== `undefined`
