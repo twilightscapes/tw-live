@@ -21,8 +21,8 @@ const divePage = ({data}) => (
 <Layout className="thanks-page">
 
 <Seo
-          title={`Todd Lambert's Favorite Photography`}
-          description={`Twilightscapes Favorite Night Photography`}
+          title={`Hole In The Wall Dive Bars`}
+          description={`Stick around for closing time at your favorite small bar or pub`}
           image={'https://twilightscapes.com/static/assets/divebars-promo.jpg'}
         />
   {/* <GalleryMenu /> */}
