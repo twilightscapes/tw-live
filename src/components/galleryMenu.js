@@ -49,7 +49,7 @@ export default class Installer extends React.Component {
 </div>
 
 
-<div><Link className="button" to="/photos/dive-bars">
+<div><Link className="button" to="/dive-bars">
   Dive Bars (new!)
 </Link></div>
 
