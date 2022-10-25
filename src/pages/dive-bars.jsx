@@ -23,7 +23,7 @@ const divePage = ({data}) => (
 <Seo
           title={`Hole In The Wall Dive Bars`}
           description={`Stick around for closing time at your favorite small bar or pub`}
-          image={'https://twilightscapes.com/static/assets/divebars-promo.jpg'}
+          image={'https://twilightscapes.com/divebars-promo.jpg'}
         />
   {/* <GalleryMenu /> */}
   <div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', overflow:'hidden', position:'relative', padding:' 0',}}>
