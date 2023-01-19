@@ -9,16 +9,18 @@ const CustomBox = styled.div`
 `
 
 const style = {
-  background: 'transparent',
-  borderRadius: 3,
-  border: '0px solid red',
-  color: 'white',
-  padding: '0 30px',
-  display:'flex',
-  flexDirection:'column',
-  justifyContent:'center',
-  alignItems:'center',
-  margin:'0 auto',
+  root: {
+    background: 'transparent',
+    borderRadius: '12px',
+    border: '0px solid',
+    color: '#fff',
+    width:'100vw',
+    margin:'0 auto'
+    // display:'grid',
+    // placeContent:'center',
+    // flexDirection:'column'
+  },
+
 
 };
 
@@ -27,15 +29,17 @@ const Foo = () => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
-<CustomBox style={{}}>
+<CustomBox style={{padding:'0px solid'}}>
+<h4 style={{textAlign:'center', fontSize:'130%', marginTop:'2rem'}}>Sharing IS Caring!
     <ShareSocial
-    className="social"
+    id="share"
     style={style}
+    // style={{background:'transparent !important'}}
     url ={url}
     // title="Sharing IS Caring!"
     socialTypes={['facebook','twitter','reddit','linkedin']}>
 
-      </ShareSocial>
+      </ShareSocial></h4>
     </CustomBox>
 
 

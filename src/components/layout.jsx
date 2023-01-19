@@ -3,8 +3,8 @@ import * as React from "react"
 // import { Header } from "./header"
 import { Footer } from "./footer"
 import { Seo } from "./seo"
-import { Link } from 'gatsby-plugin-modal-routing-3'
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
+import { Link } from 'gatsby'
+// import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 import { AiOutlineClose } from "react-icons/ai"
 // import { FaHandPointDown } from "react-icons/fa"
 import TwilightLogo from "../../static/assets/TSidebarHover.svg"
@@ -44,24 +44,21 @@ export function Layout({ children }) {
       <Seo />
       {/* <SkipNavLink /> */}
 
-      <ModalRoutingContext.Consumer>
+      {/* <ModalRoutingContext.Consumer>
     {({ modal, closeTo }) => (
       <div style={{overflow:'hidden'}}>
         {modal ? (
-          <>
           <div style={{position:'fixed', top:'60px', right:'5vw', padding:'10px', fontSize:'40px', background:'#111 !important', opacity:'1 !important', zIndex:'2',  filter:' drop-shadow(0px 4px 3px #000)',}}>
           <Link state={{noScroll: true }} to={closeTo}>
             <AiOutlineClose />
           </Link>
           </div>
-          </>
         ) : (
-<></>
+          ''
         )}
-
       </div>
     )}
-  </ModalRoutingContext.Consumer>
+  </ModalRoutingContext.Consumer> */}
 
 
       {/* <Header /> */}
