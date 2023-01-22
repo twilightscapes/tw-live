@@ -284,7 +284,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               height="100%"
               config={{
                 youtube: {
-                  playerVars: { showinfo:0, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+                  playerVars: { showinfo:0, controls:YouTubeControls, start:true, end:YouTubeEnd, mute:YouTubeMute  }
                 },
               }}
               loop
@@ -333,7 +333,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               height="100%"
               config={{
                 youtube: {
-                  playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+                  playerVars: { showinfo:0, autoplay:true, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
                 },
               }}
               loop
@@ -384,7 +384,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           playsinline
           config={{
             youtube: {
-              playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:0  }
+              playerVars: { showinfo:1, autoplay:true, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:0  }
             },
           }}
           playIcon={

@@ -14,7 +14,7 @@ const style = {
     borderRadius: '12px',
     border: '0px solid',
     color: '#fff',
-    width:'100vw',
+    width:'80%',
     margin:'0 auto'
     // display:'grid',
     // placeContent:'center',
