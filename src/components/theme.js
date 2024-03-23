@@ -2,57 +2,33 @@
 import { jsx } from "theme-ui"
 import { useColorMode } from "theme-ui"
 import { FiMoon, FiSun } from "react-icons/fi"
-
+import useSiteMetadata from "../hooks/SiteMetadata";
 const Theme = () => {
+  const { language } = useSiteMetadata();
+  const { dicLight, dicDark } = language;
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <div className="carto" sx={themeStyles.modeOption}>
-      <button
+    <div className="carto">
+      <button style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}
         onClick={e => {
           setColorMode(colorMode === "default" ? "dark" : "default")
+            // window.location.reload()
         }}
-        aria-label="Theme Color"
+        aria-label="dark light mode"
       >
-        <div sx={themeStyles.modeIcons}>
-          <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
-          <div sx={themeStyles.modeText}>
-            {colorMode === "default" ? "Dark Mode" : "Light Mode"}
+        <div 
+        // sx={themeStyles.modeIcons} 
+        className="themer" >
+          <div>{colorMode === "default" ? <FiMoon style={{width:'33px', height:'30px'}} /> : <FiSun style={{width:'33px', height:'30px'}} />}</div>
+          <div className="themetext">
+            {colorMode === "default" ? dicDark : dicLight}
           </div>
         </div>
       </button>
     </div>
   )
 }
+
 export default Theme
 
-const themeStyles = {
-  modeOption: {
-    button: {
-      fontSize: "28px",
-      bg: "transparent",
-      border: "none",
-      cursor: "pointer",
-      mt: "-2px",
-      p: "0 0 0 0",
-      "&:hover": {
-        color: "var(--primary-color)",
-      },
-    },
-  },
-  modeIcons: {
-    display: "flex",
-    alignItems: "center",
-    color: "#ccc",
-    mt: "10px",
-    "&:hover": {
-      color: "color:var(--primary-color)",
-    },
-  },
-  modeText: {
-    fontSize: "14px",
-    display: ["block", "block", "block", "block"],
-    p: " 0 10px",
-    mt: "-5px",
-    letterSpacing: "1px",
-  },
-}
+

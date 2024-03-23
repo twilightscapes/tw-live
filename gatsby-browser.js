@@ -1,38 +1,30 @@
-import * as React from "react"
-import { StoreProvider } from "./src/context/store-context"
-import "./src/styles/reset.css"
-import "./src/styles/variables.css"
-import "./src/styles/global.css"
+// import React from "react";
+// import { GlobalStateProvider } from "./src/components/GlobalStateContext";
 
-// import SimpleReactLightbox from 'simple-react-lightbox'
-
-
-
-export const wrapRootElement = ({ element }) => (
-
-  
-  <StoreProvider>{element}</StoreProvider>
-)
+// export const wrapRootElement = ({ element }) => {
+//   return <GlobalStateProvider>{element}</GlobalStateProvider>;
+// };
+// import React from "react"
+// import { IdentityContextProvider } from "react-netlify-identity-widget"
 
 
 
-
-export const onInitialClientRender = () => {
-  setTimeout(function() {
-      document.getElementById("___loader").style.display = "none"
-  }, 1000)
-}
-
+// export const wrapRootElement = ({ element }) => (
+//   <IdentityContextProvider url="https://pirateplus.netlify.app">
+//     {element}
+//   </IdentityContextProvider>
+// )
 
 export const onServiceWorkerUpdateReady = () => {
-  const answer = window.confirm(
-    `This application has been updated. ` +
-      `Reload to display the latest version?`
-  )
+  // Check if window is defined before using it
+  if (typeof window !== "undefined") {
+    const answer = window.confirm(
+      `This website has been updated since your last visit. ` +
+        `Reload to display the latest version?`
+    );
 
-  if (answer === true) {
-    window.location.reload()
+    if (answer === true) {
+      window.location.reload();
+    }
   }
-}
-
-
+};

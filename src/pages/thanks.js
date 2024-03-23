@@ -1,41 +1,68 @@
-import React from "react"
+import React from "react";
+import Seo from "../components/seo";
+import Layout from "../components/siteLayout";
 import { Link } from "gatsby"
 import { RiArrowLeftSLine, RiCheckboxCircleLine } from "react-icons/ri"
 
-import { Seo } from "../components/seo"
-import { Layout } from "../components/layout"
 
-const Thanks = () => (
-  <Layout className="thanks-page">
-    <Seo title="Thank you" />
-    <div
-      className="wrapper"
-      style={{
-        textAlign: "center",
-        width:'80%',
-        margin:'0 auto'
-      }}
-    >
-<div className="spacer33"></div> 
-      <RiCheckboxCircleLine className="neonText" 
+const Thanks = () => {
+      return (
+
+ <Layout className="thanks-page">
+ <Seo title={`Thanks for being a Pirate!`} />
+
+<section className="outer section section--gradient" >
+      <div className="container" style={{padding: '30px 0', minHeight:'100dvh'}}>
+        
+      {/* <div className="mobile"><GoBack /></div> */}
+
+
+    
+
+<div style={{width:'90%', height:'100px', margin:'0 auto', textAlign:'center',}}>
+
+{/* <p>
+<strong>Hytron Manufacturing, Inc.</strong><br />
+15582 Chemical Lane<br />
+Huntington Beach, CA 92649<br />
+</p> */}
+
+
+<RiCheckboxCircleLine className="" 
         style={{
           fontSize: "150px",
-          color: "var(--primary-color)",
+      //     color: "var(--primary-color)",
           margin:'0 auto',
           textAlign:'center'
         }}
       />
-      <h1 className="neonText" style={{fontSize:'200%'}}>Got your message</h1>
-      <p>I should respond shortly, depending on where I am at.</p>
+      <h1 className="" style={{fontSize:'50px',}}>Success!</h1>
       <div className="spacer33"></div> 
       <Link to="/" className="button">
         <RiArrowLeftSLine className="icon -left" />
-        Lets go back to Homepage
+        Back to Homepage
       </Link>
-    </div>
-    <div className="spacer33"></div> 
-    {/* <div className="spacer66"></div>  */}
-  </Layout>
-)
 
-export default Thanks
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+   
+
+
+    </section>
+    
+    
+    </Layout>
+  );
+};
+
+export default Thanks;

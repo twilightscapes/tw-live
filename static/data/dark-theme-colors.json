@@ -1,0 +1,12 @@
+{
+  "siteColor": "#a256c2",
+  "siteColorText": "white",
+  "headerColor": "rgba(0, 0, 0, .5)",
+  "headerColorText": "#fff",
+  "siteBackground": "#111",
+  "text": "#ddd",
+  "textShadow": "rgba(0, 0, 0, .6)",
+  "borderColor": "#333",
+  "borderRadius": "3px",
+  "siteFont": "Comfortaa"
+}

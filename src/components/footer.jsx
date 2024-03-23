@@ -1,13 +1,12 @@
 import * as React from "react"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
-
-import Theme from "../components/theme"
-import Consent from "../components/Consent"
-// import Install from "../components/Install-footer"
-import Icons from "../util/socialmedia.json"
+import useSiteMetadata from "../hooks/SiteMetadata"
+// import GoBack from "../components/goBack"
+// import Theme from "../components/theme"
+import Consent from "./Consent"
+// import Install from "./install-footer"
+import Icons from "../../static/data/socialmedia.json"
 import {
   RiFacebookBoxFill,
-  RiTwitterFill,
   RiLinkedinBoxFill,
   RiYoutubeFill,
   RiInstagramFill,
@@ -21,19 +20,20 @@ import {
   RiMediumFill,
   RiBehanceFill,
 } from "react-icons/ri"
-import { FaWordpress, FaVk, FaHeart } from "react-icons/fa"
-
-
+import { FaWordpress, FaVk } from "react-icons/fa"
+import Xlogo from "../img/xcorp-logo.svg"
+import Menu from "../components/menu"
 import { Link } from "gatsby"
-import {
-  footerStyle,
-  // links,
-  blurb,
-  // logos,
-} from "./footer.module.css"
-
-
-
+// import {
+//   footerStyle,
+//   // links,
+//   blurb,
+//   // logos,
+// } from "./footer.module.css"
+import BlueCheck from './bluecheck';
+import SearchIcon from "../../src/img/search"
+import Theme from "./theme"
+import Switch from "../components/Switch"
 
 const sIcons = Icons.socialIcons.map((icons, index) => {
 
@@ -51,10 +51,10 @@ const sIcons = Icons.socialIcons.map((icons, index) => {
       ) : (
         ""
       )}
-      {icons.icon === "twitter" ? (
-        <a aria-label="Link to Twitter" title="Twitter" className="social" href={icons.url} rel="noreferrer" target="_blank">
-          <RiTwitterFill />
-        </a>
+      {icons.icon === "x-twitter" ? (
+        <a aria-label="Link to Twitter X" title="The App Formerly known as Twitter" className="social" href={icons.url} rel="noreferrer" target="_blank">
+        <Xlogo style={{maxWidth:'30px'}} />
+      </a>
       ) : (
         ""
       )}
@@ -80,8 +80,8 @@ const sIcons = Icons.socialIcons.map((icons, index) => {
         ""
       )}
       {icons.icon === "rss" ? (
-        <a className="social" href={icons.url} rel="noreferrer" target="_blank">
-          <RiRssFill />
+        <a aria-label="Link to RSS" className="social" href={icons.url} rel="noreferrer" target="_blank">
+          <RiRssFill style={{maxWidth:'35px'}} />
         </a>
       ) : (
         ""
@@ -169,90 +169,200 @@ const sIcons = Icons.socialIcons.map((icons, index) => {
 
 
 
-export function Footer() {
+export default function Footer() {
   const { siteUrl } = useSiteMetadata();
 
   const speedIt = "https://googlechrome.github.io/lighthouse/viewer/?psiurl=" + siteUrl + "%2F&amp;strategy=mobile&amp;category=performance&amp;category=accessibility&amp;category=best-practices&amp;category=seo&amp;category=pwa&amp;utm_source=lh-chrome-ext"
 
 
 
+  const { language, navOptions, featureOptions, proOptions } = useSiteMetadata();
 
+  const { showFooterMenu } = navOptions
+
+  const { showfooter, showSwipe, showSearch, showSocial  } = featureOptions
+
+  const { showModals, showBranding, showLegal, showContact, showConsent   } = proOptions
+
+  const { dicSocial, dicDisclaimer, dicPrivacy, dicTerms, dicCopyright, dicContact, dicPirate, dicSiteReport, dicSearch } = language;
+
+
+  const { iconimage } = useSiteMetadata()
 
 
   const { companyname } = useSiteMetadata()
-  const { showfooter } = useSiteMetadata()
 
-
-
-
-
+  function isRunningStandalone() {
+    if (typeof window !== 'undefined') {
+        return window.matchMedia('(display-mode: standalone)').matches;
+    }
+    return false;
+}
 
 
   return (
 
 
-    showfooter ? (
-  
+<>
 
+{isRunningStandalone() ? (
+  ""
+) : (
 
+  <>
 
-    <footer className={footerStyle} style={{padding:'1rem 0', marginTop:'0', position:'relative'}}>
+    {showfooter ? (
+      <footer className="panel" style={{display:'flex', flexDirection:'column', zIndex:'', justifyContent:'end', padding:'0 0 60px 0', marginTop:'0', width:'100vw',textAlign:'center', background:'var(--theme-ui-colors-headerColor)', paddingTop: showFooterMenu ? '100px' : '0'}}>
 
+{showConsent ? (
     <Consent />
+  ) : (
+""
+    )}
+
 
     
-      <div className={blurb}>
+{showFooterMenu ? (
+  <div className="menu print panel1" style={{}}>
+    <div id="footermenu" className="menu print panel1 header" style={{position:'absolute', width:'100%', top:'0', zIndex:'10', maxHeight:'', overFlow:'', boxShadow:'0 0 0 rgba(0,0,0,.7)', padding:'0 2%', marginBottom:'', alignItems:'start', borderRadius:'0', display:'flex', justifyContent:'space-around', gap:'10px', color:'var(--theme-ui-colors-headerColorText)',  borderBottom:'0px solid #222',}}>
 
+      <div style={{position:'absolute', left:'10px', top:'22px', cursor:'pointer'}}><BlueCheck /></div>
 
-      <Link state={{modal: true}} to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me - I&nbsp;<FaHeart />&nbsp;feedback!</Link>
+      <Link state={showModals ? { modal: true } : {}} to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'flex', marginLeft:'25px', alignItems:'center', justifyContent:'center', maxWidth:'', height:'60px', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
+        {iconimage ? (
+          <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:'60px'}} src={iconimage} alt={companyname} width="111" height="60" />
+        ) : (
+          <div style={{fontWeight:'', display:'grid', justifyContent:'center', alignItems:'center', height:'', fontSize:'clamp(.9rem,2vw,1rem)', color:'var(--theme-ui-colors-headerColorText)', maxWidth:'50vw' }}>
+            {/* {truncateText(companyname, 28)} */}
+            {companyname}
+          </div>
+        )}
+      </Link>
 
- <div >
-     
+      <ul className="topmenu" style={{ fontSize:'clamp(.6rem, 1.6vw, 1.8rem)',  textAlign:'center',maxHeight:'', display:'flex', justifyContent:'space-between', gap:'4vw',  alignItems:'center', margin:'0 auto 0 auto', padding:'1.5vh 2% 0 2%', border:'0px solid white',}}>
+        <Menu />
+      </ul>
 
-        { !sIcons ? (
-    ""
-
-  ) : (
-    <div className="social-icons" style={{textAlign:'center', justifyContent:'center', display:'flex', alignItems:'center'}}>
-       <div className="socialtext" style={{fontSize:'14px',}}>Social<br />Links</div> {sIcons}
+      <div id="missioncontrol" className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
+        {showSearch ? (
+          <div className="searchIcon">
+            <Link state={showModals ? { modal: true } : {}} aria-label="Search" to="/search/" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
+              <SearchIcon style={{height:'30px'}} />
+              <span className="themetext">{dicSearch}</span>
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
+        <div>
+          <Theme  style={{}} />
         </div>
-  )}
-  
-        
-        </div>
-
-        
+        {showSwipe ? (
+          <Switch />
+        ) : (
+          ""
+        )}
       </div>
-      <nav className="footerlinks" aria-label="footer">
-      <div style={{textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none'}}><Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link></div>
+    </div>
+  </div>
+) : (
+  ""
+)}
+
+{/* <Install /> */}
+
+{ showContact ? (
+  <Link id="footercontact" state={{modal: true}} to="/contact/" className="button  font" style={{margin:'2rem', textDecoration:'none', padding:'1vh 2rem', }}>{dicContact}</Link>
+) : (
+  ""
+)}
+
+
+
+
+{ showSocial ? (
+  <div className="social-icons" style={{textAlign:'center', justifyContent:'center', display:'flex', alignItems:'center', margin:'2rem 0'}}>
+       <div className="socialtext" style={{fontSize:'14px',}}>{dicSocial}</div> {sIcons}
+        </div>
+      ) : (
+""
+  )}
+
+
+    
+
   
+        
 
-<div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem'}}>Copyright &copy; {(new Date().getFullYear())} {companyname}</div>
 
-<div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem', position:'relative', right:'', top:'10px'}}>
-<Theme  style={{display:'flex', alignSelf:'center',}} />
-
-<br />
-<br />
-
-<a href="https://vidsocks.com" target="_blank" rel="noreferrer">Web App by VidSocks</a> &nbsp; | &nbsp; <a href={speedIt} target="_blank" rel="noreferrer">Site Report Card</a></div>
+        
 
 
 
-<br />
-<br />
+      <nav className="footerlinks" aria-label="footer">
+
+
+      
+        <div style={{width:'100vw', textAlign: 'center', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none', display:'grid', margin:'1rem auto'}}>
+{ showLegal ? (
+<div style={{display:'flex', justifyContent:'center', gap:'4%', width:'100%', minWidth:'380px' }}><Link state={{modal: true}} to="/disclaimer/">{dicDisclaimer}</Link> | <Link state={{modal: true}} to="/privacy/">{dicPrivacy}</Link> | <Link state={{modal: true}} to="/terms/">{dicTerms}</Link></div>
+) : (
+""
+  )}
+  <br />
+  <br />
+{dicCopyright} &copy;
+{(new Date().getFullYear())} 
+&nbsp;
+ {companyname}
+</div>
+      
+
+
+
+
+
+{ showBranding ? (
+  <div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem', position:'relative', right:'', top:'10px'}}>
+<a href="https://pirateweb.org" rel="noreferrer">{dicPirate}</a> &nbsp; | &nbsp; <a href={speedIt} rel="noreferrer">{dicSiteReport}</a>
+</div>
+      ) : (
+""
+  )}
+
+
+
+
+
+
+
+
+
       </nav>
    
     </footer>
 
     ) : (
-      ""
-    )
+      <footer className="" style={{display:'flex', flexDirection:'column', zIndex:'1', justifyContent:'end', padding:'0', marginTop:'0', width:'100vw',textAlign:'center'}}>
+          { showBranding ? (
+      <div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem', position:'relative', right:'', top:'10px'}}>
+    <a href="https://pirateweb.org" rel="noreferrer">{dicPirate}</a> &nbsp; | &nbsp; <a href={speedIt} rel="noreferrer">{dicSiteReport}</a>
+    </div>
+          ) : (
+    ""
+      )}
+      </footer>
+    )}
 
+
+
+</>
+)}
+
+    </>
 
 
     
   )
 }
-
 

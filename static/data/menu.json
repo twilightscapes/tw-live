@@ -1,0 +1,17 @@
+{
+  "menuItems": [
+    {
+      "menutitle": "About Todd",
+      "url": "/about"
+    },
+    {
+      "menutitle": "Photo Collections",
+      "url": "/photo"
+    },
+    {
+      "menutitle": "Contact Me",
+      "url": "/contact"
+    }
+    
+  ]
+}
