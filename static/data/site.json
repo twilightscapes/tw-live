@@ -14,7 +14,8 @@
       "showSwipe": true,
       "showVideoPlayer": false,
       "showHomePosts": false,
-      "showProfile": true
+      "showProfile": true,
+      "defaultCollection": "Favorites"
     },
     "twitterUsername": "toddlambert",
     "titleDefault": "Twilightscapes",
